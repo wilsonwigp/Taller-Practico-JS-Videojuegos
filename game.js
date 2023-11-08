@@ -4,6 +4,7 @@ const buttonup=document.querySelector("#up");
 const buttondown=document.querySelector("#down");
 const buttonright=document.querySelector("#right");
 const buttonleft=document.querySelector("#left");
+const buttonreset=document.querySelector("#reset_game");
 const spanLives=document.querySelector("#lives");
 const spanTime=document.querySelector("#time")
 const spanRecord=document.querySelector("#record");
@@ -189,6 +190,11 @@ buttonup.addEventListener("click",apretoarriba);
 buttondown.addEventListener("click",apretoabajo);
 buttonright.addEventListener("click",apretoderecha);
 buttonleft.addEventListener("click",apretoizquierda);
+buttonreset.addEventListener("click",reseteojuego);
+
+function reseteojuego(){
+    location.reload();
+}
 
 function showrecord(){
     spanRecord.innerHTML=localStorage.getItem("record_time")
